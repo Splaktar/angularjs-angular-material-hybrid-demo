@@ -1,5 +1,5 @@
 import './polyfills';
-import angular from 'angular';
+import * as angular from 'angular';
 import {angularJSAppModule} from './ng1/angularjs-app.module';
 
 // Ensure AngularJS destroys itself on hot reloads.

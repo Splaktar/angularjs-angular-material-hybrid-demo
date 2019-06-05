@@ -1,5 +1,4 @@
-import angular from 'angular';
-import {Directive, ElementRef, Injector, Input} from '@angular/core';
+import {Directive, ElementRef, Injector} from '@angular/core';
 import {UpgradeComponent} from '@angular/upgrade/static';
 
 export const tabsComponent = {
@@ -8,7 +7,6 @@ export const tabsComponent = {
   controller: class TabsComponent {
     $digestCount;
     showTabsContainer = false;
-    universityName = 'UBC University';
 
     constructor($scope) {
       this.$digestCount = 0;
