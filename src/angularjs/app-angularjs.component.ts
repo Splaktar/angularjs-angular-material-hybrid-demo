@@ -1,5 +1,5 @@
 export const appAngularJSComponent = {
-  selector: 'app-angularjs',
+  selector: 'appAngularjs',
   template: '<app-component [name]="$ctrl.name"></app-component>',
   controller: class AngularComponent {
     name = 'ngUpgradeLite';

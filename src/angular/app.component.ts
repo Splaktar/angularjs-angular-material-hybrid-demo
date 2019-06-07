@@ -1,14 +1,18 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-component',
-  template: `
-    <app-tabs></app-tabs>
-    <app-version-stamp></app-version-stamp>
-    Hello, {{ name }}!
-  `
+  templateUrl: './app.component.html'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   static selector = 'app-component';
   @Input() name: string;
+
+  constructor() {
+    console.log('AppComponent constructor');
+  }
+
+  ngOnInit(): void {
+    console.log('AppComponent ngOnInit');
+  }
 }

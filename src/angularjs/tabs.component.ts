@@ -2,10 +2,10 @@ import {Directive, ElementRef, Injector} from '@angular/core';
 import {UpgradeComponent} from '@angular/upgrade/static';
 
 export const tabsComponent = {
-  selector: 'app-tabs',
+  selector: 'tabs',
   templateUrl: './tabs.component.html',
   controller: class TabsComponent {
-    $digestCount;
+    $digestCount = 0;
     showTabsContainer = false;
 
     constructor($scope) {

@@ -2,9 +2,8 @@ import * as angular from 'angular';
 import {Directive, ElementRef, Injector, VERSION} from '@angular/core';
 import {UpgradeComponent} from '@angular/upgrade/static';
 
-
 export const versionStampComponent = {
-  selector: 'app-version-stamp',
+  selector: 'version-stamp',
   template: `
     <style>
       .version-container {

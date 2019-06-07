@@ -4,19 +4,18 @@ import {VersionStampComponentFacade} from '../angularjs/version-stamp.component'
 import {TabsComponentFacade} from '../angularjs/tabs.component';
 import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {CommonModule} from '@angular/common';
 
 @NgModule({
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    CommonModule
   ],
   declarations: [
     AppComponent,
     VersionStampComponentFacade,
     TabsComponentFacade
-  ],
-  entryComponents: [
-    AppComponent
   ]
 })
 export class MainAngularModule {

@@ -7,6 +7,7 @@ import {downgradeComponent, downgradeModule, setAngularJSGlobal} from '@angular/
 import {AppComponent} from '../angular/app.component';
 // @ts-ignore
 import {MainAngularModuleNgFactory} from '../angular/main-angular.module.ngfactory';
+import {MainAngularModule} from '../angular/main-angular.module';
 import {appAngularJSComponent} from './app-angularjs.component';
 import {versionStampComponent} from './version-stamp.component';
 import {tabsComponent} from './tabs.component';
@@ -19,19 +20,29 @@ function bootstrapAngular(extraProviders: StaticProvider[]): any {
   //   enableProdMode();
   // }
   return platformBrowserDynamic(extraProviders)
-  .bootstrapModuleFactory(MainAngularModuleNgFactory)
+  // .bootstrapModuleFactory(MainAngularModuleNgFactory)
+  .bootstrapModule(MainAngularModule)
   .catch(err => console.log(err));
 }
 
+function angularModuleBootstrapFn(extraProviders) {
+  return platformBrowserDynamic(extraProviders)
+  // .bootstrapModuleFactory(MainAngularModuleNgFactory);
+  .bootstrapModule(MainAngularModule);
+}
+
+const downgradedModule = downgradeModule(bootstrapAngular);
+
 export const appAngularjsModule = angular.
-  module('DemoApp', [
+  module('AngularJSApp', [
     'ngMaterial',
     'ngMessages',
-    downgradeModule(bootstrapAngular)
+     downgradedModule
   ])
   .component(appAngularJSComponent.selector, appAngularJSComponent)
   .component(versionStampComponent.selector, versionStampComponent)
   .component(tabsComponent.selector, tabsComponent)
   .directive(AppComponent.selector, downgradeComponent({
-    component: AppComponent
+    component: AppComponent,
+    downgradedModule: downgradedModule
   }));
