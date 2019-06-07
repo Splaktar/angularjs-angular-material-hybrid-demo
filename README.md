@@ -2,7 +2,10 @@
 
 This was started on [StackBlitz](https://stackblitz.com/edit/angularjs-material-ngupgradelite-demo),
 based on a demo by [George Kalpakas](https://github.com/gkalpak), but using ngUpgrade can be done
-in a way that is either compatible with StackBlitz or the Angular CLI, not both.
+in a way that is either compatible with StackBlitz or the Angular CLI, not both. This repo uses the
+Angular CLI along with the `downgradeModule()`.
+
+Find out more in the [Upgrading for Performance Guide](https://angular.io/guide/upgrade-performance).
 
 ## AngularJS Material Migration Guide
 
