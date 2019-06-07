@@ -41,7 +41,7 @@ Learn more in the [AngularJS Material Migration Guide](https://material.angularj
 ## TODO
 
 - [ ] Look into loading `$templateCache` at build time, maybe using Gulp.
-- [ ] Look into working around Terser mangling, maybe something like `ng-annotate`.
+- [ ] Look into working around Terser mangling, using [dependency annotation](https://docs.angularjs.org/guide/di#dependency-annotation).
 - [ ] Add more AngularJS Material components.
 - [ ] Add more Angular Material components.
 - [ ] Add more CDK components.
