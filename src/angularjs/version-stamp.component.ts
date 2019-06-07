@@ -4,7 +4,7 @@ import {UpgradeComponent} from '@angular/upgrade/static';
 
 
 export const versionStampComponent = {
-  selector: 'version-stamp',
+  selector: 'app-version-stamp',
   template: `
     <style>
       .version-container {

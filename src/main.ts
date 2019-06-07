@@ -1,6 +1,6 @@
 import './polyfills';
 import * as angular from 'angular';
-import {angularJSAppModule} from './ng1/angularjs-app.module';
+import {appAngularjsModule} from './angularjs/app-angularjs.module';
 
 // Ensure AngularJS destroys itself on hot reloads.
 const rootElement = angular.element(document.body);
@@ -10,4 +10,4 @@ if (oldInjector) {
   rootElement.data('$injector', null);
 }
 
-angular.bootstrap(rootElement, [angularJSAppModule.name]);
+angular.bootstrap(rootElement, [appAngularjsModule.name]);

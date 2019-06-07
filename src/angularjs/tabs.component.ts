@@ -2,7 +2,7 @@ import {Directive, ElementRef, Injector} from '@angular/core';
 import {UpgradeComponent} from '@angular/upgrade/static';
 
 export const tabsComponent = {
-  selector: 'angularjs-tabs',
+  selector: 'app-tabs',
   templateUrl: './tabs.component.html',
   controller: class TabsComponent {
     $digestCount;
