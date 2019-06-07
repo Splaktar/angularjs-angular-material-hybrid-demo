@@ -2,17 +2,17 @@ import * as angular from 'angular';
 import {Directive, ElementRef, Injector, VERSION} from '@angular/core';
 import {UpgradeComponent} from '@angular/upgrade/static';
 
+
 export const versionStampComponent = {
   selector: 'version-stamp',
   template: `
     <style>
       .version-container {
-        border-bottom: 1px solid lightgray;
         color: gray;
         display: flex;
         justify-content: space-between;
-        margin: 0 0 5px;
-       padding: 25px 0 5px;
+        margin: 8px;
+        padding: 8px;
       }
       .version {
         font-size: 0.75em;
@@ -20,6 +20,7 @@ export const versionStampComponent = {
       }
     </style>
 
+    <md-divider></md-divider>
     <div class="version-container">
       <span class="version angularjs">AngularJS v{{ $ctrl.versions.angularjs }}</span>
       <span class="version angular">Angular v{{ $ctrl.versions.angular }}</span>

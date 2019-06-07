@@ -23,7 +23,7 @@
             "tsConfig": "src/tsconfig.app.json",
             "assets": [],
             "styles": [
-              "src/styles.css",
+              "src/styles.scss",
               "node_modules/angular-material/angular-material.min.css"
             ],
             "scripts": []

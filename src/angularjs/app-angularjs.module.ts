@@ -25,12 +25,6 @@ function bootstrapAngular(extraProviders: StaticProvider[]): any {
   .catch(err => console.log(err));
 }
 
-function angularModuleBootstrapFn(extraProviders) {
-  return platformBrowserDynamic(extraProviders)
-  // .bootstrapModuleFactory(MainAngularModuleNgFactory);
-  .bootstrapModule(MainAngularModule);
-}
-
 const downgradedModule = downgradeModule(bootstrapAngular);
 
 export const appAngularjsModule = angular.
