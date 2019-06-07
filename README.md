@@ -16,3 +16,35 @@ Additionally, we provide guidance on using pure CSS Grid and Flexbox for layout,
 theming features, services, typography, and more.
 
 Learn more in the [AngularJS Material Migration Guide](https://material.angularjs.org/latest/migration). 
+
+## Caveats found so far
+
+- Different `selector` formatting and conversions between AngularJS and Angular. It depends on which
+    is referring to the component, not which the component is build for.
+  - AngularJS referring to any component: `appComponent`
+  - Angular referring to any component: `app-component`
+- ngUpgrade projects that work on StackBlitz, don’t work in the CLI and vice versa.
+- Need to provide at least one `entryComponents` for CLI support (not mentioned in
+  [guide](https://angular.io/guide/upgrade-performance#bootstrapping-with-downgrademodule)).
+- Need to disable Terser via `"optimization": false` in production configuration or it will mangle
+  AngularJS Provider names.
+
+### AngularJS Components w/ templateUrl
+
+- `templateUrl` in AngularJS components does not work out of the box
+  - Possible to manually load the `$templateCache`
+  - Must tell the CLI to deploy the templates via `assets:` in [`angular.json`](angular.json)
+    and a glob of `*.html` files.
+  - Any components that use `templateUrl` should not be displayed on page load as loading the
+    `$templateCache` is asynchronous.
+
+## TODO
+
+- [ ] Look into loading `$templateCache` at build time, maybe using Gulp.
+- [ ] Look into working around Terser mangling, maybe something like `ng-annotate`.
+- [ ] Add more AngularJS Material components.
+- [ ] Add more Angular Material components.
+- [ ] Add more CDK components.
+- [ ] Add some AngularJS Material services.
+- [ ] Add some Angular Material services.
+- [ ] Add some CDK services.
