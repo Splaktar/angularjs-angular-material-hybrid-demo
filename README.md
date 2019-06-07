@@ -31,8 +31,8 @@ Learn more in the [AngularJS Material Migration Guide](https://material.angularj
 
 ### AngularJS Components w/ templateUrl
 
-- `templateUrl` in AngularJS components does not work out of the box
-  - Possible to manually load the `$templateCache`
+- `templateUrl` in AngularJS components does not work out of the box.
+  - Possible to manually load the `$templateCache` in `.run()`.
   - Must tell the CLI to deploy the templates via `assets:` in [`angular.json`](angular.json)
     and a glob of `*.html` files.
   - Any components that use `templateUrl` should not be displayed on page load as loading the
