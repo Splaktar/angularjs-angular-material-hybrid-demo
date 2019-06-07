@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "material-hybrid": {
+      "hosting": {
+        "app": [
+          "material-hybrid"
+        ]
+      }
+    }
+  }
+}

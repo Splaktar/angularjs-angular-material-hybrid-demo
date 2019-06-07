@@ -6,7 +6,6 @@ export const tabsComponent = {
   templateUrl: 'templates/tabs.component.html',
   controller: class TabsComponent {
     $digestCount = 0;
-    showTabsContainer = false;
 
     constructor($scope) {
       this.$digestCount = 0;

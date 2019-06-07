@@ -7,6 +7,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {CommonModule} from '@angular/common';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 @NgModule({
   imports: [
@@ -14,7 +15,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     BrowserAnimationsModule,
     CommonModule,
     MatToolbarModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatExpansionModule
   ],
   declarations: [
     AppComponent,

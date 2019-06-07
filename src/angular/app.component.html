@@ -2,14 +2,35 @@
   <span>AngularJS/Angular Material Hybrid</span>
 </mat-toolbar>
 <!-- Input that came from AngularJS -->
-<h3>{{ name }} Demo</h3>
+<h2>{{ name }} Demo</h2>
 <br>
-<br>
-<br>
-<!-- AngularJS Component -->
-<tabs></tabs>
+<mat-accordion>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        AngularJS Material
+      </mat-panel-title>
+      <mat-panel-description>
+        Components built for AngularJS 1.x
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <!-- AngularJS Component that uses templateUrl-->
+    <tabs></tabs>
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Angular Material
+      </mat-panel-title>
+      <mat-panel-description>
+        Components built for Angular version 8
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <p>Coming soon...</p>
+  </mat-expansion-panel>
+</mat-accordion>
 <br>
 <footer>
-  <!-- AngularJS Component -->
+  <!-- AngularJS Component that has an inline template -->
   <version-stamp></version-stamp>
 </footer>
