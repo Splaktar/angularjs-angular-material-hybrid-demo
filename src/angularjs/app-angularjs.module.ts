@@ -13,6 +13,7 @@ import {versionStampComponent} from './version-stamp.component';
 import {tabsComponent} from './tabs.component';
 import {StaticProvider} from '@angular/core';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+import {templates} from './template-list';
 
 function bootstrapAngular(extraProviders: StaticProvider[]): any {
   setAngularJSGlobal(angular);
@@ -33,6 +34,11 @@ export const appAngularjsModule = angular.
     'ngMessages',
      downgradedModule
   ])
+  .run(($templateCache, $templateRequest) => {
+    templates.forEach((templateUrl: string) => {
+      $templateRequest(templateUrl).then((template) => $templateCache.put(templateUrl, template));
+    });
+  })
   .component(appAngularJSComponent.selector, appAngularJSComponent)
   .component(versionStampComponent.selector, versionStampComponent)
   .component(tabsComponent.selector, tabsComponent)

@@ -3,7 +3,7 @@ import {UpgradeComponent} from '@angular/upgrade/static';
 
 export const tabsComponent = {
   selector: 'tabs',
-  templateUrl: 'angularjs/tabs.component.html',
+  templateUrl: 'templates/tabs.component.html',
   controller: class TabsComponent {
     $digestCount = 0;
     showTabsContainer = false;

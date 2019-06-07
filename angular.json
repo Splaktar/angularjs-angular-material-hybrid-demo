@@ -21,10 +21,15 @@
             "index": "src/index.html",
             "main": "src/main.ts",
             "tsConfig": "src/tsconfig.app.json",
-            "assets": [],
+            "assets": [
+              {
+                "input": "src/angularjs/", "output": "/templates/",
+                "glob": "**/*.html"
+              }
+            ],
             "styles": [
               "src/styles.scss",
-              "node_modules/angular-material/angular-material.min.css"
+              "node_modules/angular-material/angular-material.scss"
             ],
             "scripts": []
           },
