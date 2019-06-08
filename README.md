@@ -33,10 +33,13 @@ Learn more in the [AngularJS Material Migration Guide](https://material.angularj
 
 - Enable `strictDi` to help you catch issues early:
   - `angular.bootstrap(rootElement, [angularjsModule.name], {strictDi: true});`
+  - ([example](https://github.com/Splaktar/angularjs-angular-material-hybrid-demo/blob/a77f0567b1795529c1859f1b70fafc5ab5e998be/src/main.ts#L13))
 - For injections into `.run()`, `.config()`, etc. use standard dependency annotation:
   - `.run(['$templateCache', '$templateRequest', ($templateCache, $templateRequest) => {`
+  - ([example](https://github.com/Splaktar/angularjs-angular-material-hybrid-demo/blob/a77f0567b1795529c1859f1b70fafc5ab5e998be/src/angularjs/app-angularjs.module.ts#L22-L26))
 - For TypeScript classes use `$inject`:
   - `static $inject = ['$scope'];`
+  - ([example](https://github.com/Splaktar/angularjs-angular-material-hybrid-demo/blob/a77f0567b1795529c1859f1b70fafc5ab5e998be/src/angularjs/tabs.component.ts#L7-L11))
 
 ### AngularJS Components w/ templateUrl
 
