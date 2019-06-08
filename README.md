@@ -29,6 +29,15 @@ Learn more in the [AngularJS Material Migration Guide](https://material.angularj
 - Need to disable Terser via `"optimization": false` in production configuration or it will mangle
   AngularJS Provider names.
 
+## Minification-friendly AngularJS Code
+
+- Enable `strictDi` to help you catch issues early:
+  - `angular.bootstrap(rootElement, [angularjsModule.name], {strictDi: true});`
+- For injections into `.run()`, `.config()`, etc. use standard dependency annotation:
+  - `.run(['$templateCache', '$templateRequest', ($templateCache, $templateRequest) => {`
+- For TypeScript classes use `$inject`:
+  - `static $inject = ['$scope'];`
+
 ### AngularJS Components w/ templateUrl
 
 - `templateUrl` in AngularJS components does not work out of the box.

@@ -19,11 +19,11 @@ export const appAngularjsModule = angular.
     'ngMessages',
      downgradedModule
   ])
-  .run(($templateCache, $templateRequest) => {
+  .run(['$templateCache', '$templateRequest', ($templateCache, $templateRequest) => {
     templates.forEach((templateUrl: string) => {
       $templateRequest(templateUrl).then((template) => $templateCache.put(templateUrl, template));
     });
-  })
+  }])
   .component(appAngularJSComponent.selector, appAngularJSComponent)
   .component(versionStampComponent.selector, versionStampComponent)
   .component(tabsComponent.selector, tabsComponent)

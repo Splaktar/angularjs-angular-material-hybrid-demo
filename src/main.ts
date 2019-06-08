@@ -10,4 +10,4 @@ if (oldInjector) {
   rootElement.data('$injector', null);
 }
 
-angular.bootstrap(rootElement, [appAngularjsModule.name]);
+angular.bootstrap(rootElement, [appAngularjsModule.name], {strictDi: true});

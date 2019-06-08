@@ -48,7 +48,7 @@
                   "with": "src/angularjs/bootstrap-module-factory.ts"
                 }
               ],
-              "optimization": false,
+              "optimization": true,
               "outputHashing": "all",
               "sourceMap": true,
               "extractCss": true,

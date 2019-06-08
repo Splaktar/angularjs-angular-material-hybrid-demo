@@ -5,6 +5,7 @@ export const tabsComponent = {
   selector: 'tabs',
   templateUrl: 'templates/tabs.component.html',
   controller: class TabsComponent {
+    static $inject = ['$scope'];
     $digestCount = 0;
 
     constructor($scope) {
