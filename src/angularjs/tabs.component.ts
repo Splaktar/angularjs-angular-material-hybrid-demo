@@ -3,7 +3,7 @@ import {UpgradeComponent} from '@angular/upgrade/static';
 
 export const tabsComponent = {
   selector: 'tabs',
-  templateUrl: 'templates/tabs.component.html',
+  templateUrl: '/tabs.component.html',
   controller: class TabsComponent {
     static $inject = ['$scope'];
     $digestCount = 0;

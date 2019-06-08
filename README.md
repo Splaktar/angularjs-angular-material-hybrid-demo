@@ -42,17 +42,17 @@ Learn more in the [AngularJS Material Migration Guide](https://material.angularj
   - [Example](https://github.com/Splaktar/angularjs-angular-material-hybrid-demo/blob/a77f0567b1795529c1859f1b70fafc5ab5e998be/src/angularjs/tabs.component.ts#L7-L11)
 
 ### AngularJS Components w/ templateUrl
+`templateUrl` in AngularJS components does not work out of the box with Angular CLI.
+The following steps will configure a module that loads `$templateCache` at build time:
 
-- `templateUrl` in AngularJS components does not work out of the box.
-  - Possible to manually load the `$templateCache` in `.run()`.
-  - Must tell the CLI to deploy the templates via `assets:` in [`angular.json`](angular.json)
-    and a glob of `*.html` files.
-  - Any components that use `templateUrl` should not be displayed on page load as loading the
-    `$templateCache` is asynchronous.
+- `gulp-angular-templatecache` automates `$templateCache` loading. See simple [gulpfile](gulpfile.ts).
+- `gulp-htmlmin` minifies the templates before putting them in the `$templateCache`
+- The output goes in [src/angularjs/templates/templates.js](src/angularjs/templates/templates.js).
+- The [src/angularjs/templates/index.js](src/angularjs/templates/index.js) file sets up a module.
+- Then we import the module and use the `'templates'` string in our AngularJS module creation.
 
 ## TODO
 
-- [ ] Look into loading `$templateCache` at build time, maybe using Gulp.
 - [ ] Add more AngularJS Material components.
 - [ ] Add more Angular Material components.
 - [ ] Add more CDK components.
@@ -60,3 +60,4 @@ Learn more in the [AngularJS Material Migration Guide](https://material.angularj
 - [ ] Add some Angular Material services.
 - [ ] Add some CDK services.
 - [x] Work around Terser mangling, using [dependency annotation](https://docs.angularjs.org/guide/di#dependency-annotation).
+- [x] Look into loading `$templateCache` at build time, using Gulp.

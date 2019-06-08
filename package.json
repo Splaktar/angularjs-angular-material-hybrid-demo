@@ -1,6 +1,6 @@
 {
   "name": "angularjs-angular-material-hybrid-demo",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@angular/animations": "^8.0.0 || ^9.0.0-0",
@@ -29,12 +29,13 @@
   },
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "npm run build:templates && ng serve",
+    "build:templates": "gulp templates",
+    "build": "npm run build:templates && ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng run app:deploy",
+    "deploy": "npm run build:templates && ng run app:deploy",
     "update": "npm-check -u"
   },
   "devDependencies": {
@@ -49,6 +50,9 @@
     "codelyzer": "^5.0.1",
     "firebase-tools": "^6.11.0",
     "fuzzy": "^0.1.3",
+    "gulp": "^4.0.2",
+    "gulp-angular-templatecache": "^3.0.0",
+    "gulp-htmlmin": "^5.0.1",
     "inquirer": "^6.2.2",
     "inquirer-autocomplete-prompt": "^1.0.1",
     "jasmine-core": "^3.4.0",

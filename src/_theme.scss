@@ -15,5 +15,5 @@ $app-warn: mat-palette($mat-red);
 $app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
 
 $custom-typography: mat-typography-config(
-$body-1: mat-typography-level(16px, 24px, 400)
+  $body-1: mat-typography-level(16px, 24px, 400)
 );
