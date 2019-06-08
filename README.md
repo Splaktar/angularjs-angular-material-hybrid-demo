@@ -29,7 +29,7 @@ Learn more in the [AngularJS Material Migration Guide](https://material.angularj
 - Need to disable Terser via `"optimization": false` in production configuration or it will mangle
   AngularJS Provider names.
 
-## Minification-friendly AngularJS Code
+### Minification-friendly AngularJS Code
 
 - Enable `strictDi` to help you catch issues early:
   - `angular.bootstrap(rootElement, [angularjsModule.name], {strictDi: true});`
