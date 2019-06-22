@@ -26,8 +26,6 @@ Learn more in the [AngularJS Material Migration Guide](https://material.angularj
 - ngUpgrade projects that work on StackBlitz, don’t work in the CLI and vice versa.
 - Need to provide at least one `entryComponents` for CLI support (not mentioned in
   [guide](https://angular.io/guide/upgrade-performance#bootstrapping-with-downgrademodule)).
-- Need to disable Terser via `"optimization": false` in production configuration or it will mangle
-  AngularJS Provider names.
 
 ### Minification-friendly AngularJS Code
 
