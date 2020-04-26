@@ -3,17 +3,17 @@
   "version": "0.1.5",
   "private": true,
   "dependencies": {
-    "@angular/animations": "8.2.14",
+    "@angular/animations": "9.1.3",
     "@angular/cdk": "8.2.3",
-    "@angular/common": "8.2.14",
-    "@angular/compiler": "8.2.14",
-    "@angular/core": "8.2.14",
+    "@angular/common": "9.1.3",
+    "@angular/compiler": "9.1.3",
+    "@angular/core": "9.1.3",
     "@angular/fire": "^5.3.0",
-    "@angular/forms": "8.2.14",
+    "@angular/forms": "9.1.3",
     "@angular/material": "8.2.3",
-    "@angular/platform-browser": "8.2.14",
-    "@angular/platform-browser-dynamic": "8.2.14",
-    "@angular/upgrade": "8.2.14",
+    "@angular/platform-browser": "9.1.3",
+    "@angular/platform-browser-dynamic": "9.1.3",
+    "@angular/upgrade": "9.1.3",
     "@types/angular": "^1.6.57",
     "@types/angular-material": "^1.1.70",
     "angular": "^1.7.9",
@@ -25,7 +25,7 @@
     "firebase": "^7.8.0",
     "rxjs": "^6.5.4",
     "tslib": "^1.10.0",
-    "zone.js": "~0.9.1"
+    "zone.js": "~0.10.2"
   },
   "scripts": {
     "ng": "ng",
@@ -40,14 +40,14 @@
   },
   "devDependencies": {
     "@angular-devkit/architect": "^0.803.24",
-    "@angular-devkit/build-angular": "~0.803.24",
-    "@angular/cli": "~8.3.24",
-    "@angular/compiler-cli": "~8.2.14",
-    "@angular/language-service": "~8.2.14",
+    "@angular-devkit/build-angular": "~0.901.3",
+    "@angular/cli": "~9.1.3",
+    "@angular/compiler-cli": "~9.1.3",
+    "@angular/language-service": "~9.1.3",
     "@types/jasmine": "^3.5.2",
     "@types/jasminewd2": "^2.0.8",
-    "@types/node": "^13.7.0",
-    "codelyzer": "^5.2.1",
+    "@types/node": "^12.11.1",
+    "codelyzer": "^5.1.2",
     "firebase-tools": "^7.12.1",
     "gulp": "^4.0.2",
     "gulp-angular-templatecache": "^3.0.0",
@@ -63,6 +63,6 @@
     "protractor": "^5.4.3",
     "ts-node": "^8.6.2",
     "tslint": "^5.20.0",
-    "typescript": "~3.5.3"
+    "typescript": "~3.8.3"
   }
 }
