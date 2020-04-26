@@ -1,7 +1,7 @@
 import {enableProdMode, StaticProvider} from '@angular/core';
 import {setAngularJSGlobal} from '@angular/upgrade/static';
 import * as angular from 'angular';
-import {environment} from '../environments/environment';
+import {environment} from '../../environments/environment';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import {MainAngularModule} from '../angular/main-angular.module';
 

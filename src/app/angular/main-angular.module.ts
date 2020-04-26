@@ -8,6 +8,14 @@ import {CommonModule} from '@angular/common';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatExpansionModule} from '@angular/material/expansion';
+import {TabsComponent} from './tabs/tabs.component';
+import {MatTabsModule} from '@angular/material/tabs';
+import {ButtonsComponent} from './buttons/buttons.component';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+import {MatDividerModule} from '@angular/material/divider';
+import {CdkTreeComponent} from './cdk-tree/cdk-tree.component';
+import {CdkTreeModule} from '@angular/cdk/tree';
 
 @NgModule({
   imports: [
@@ -16,12 +24,20 @@ import {MatExpansionModule} from '@angular/material/expansion';
     CommonModule,
     MatToolbarModule,
     MatProgressSpinnerModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatTabsModule,
+    MatButtonModule,
+    MatIconModule,
+    MatDividerModule,
+    CdkTreeModule
   ],
   declarations: [
     AppComponent,
     VersionStampComponentFacade,
-    TabsComponentFacade
+    TabsComponentFacade,
+    TabsComponent,
+    ButtonsComponent,
+    CdkTreeComponent
   ]
 })
 export class MainAngularModule {

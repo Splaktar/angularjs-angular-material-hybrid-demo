@@ -43,8 +43,8 @@ The following steps will configure a module that loads `$templateCache` at build
 
 - `gulp-angular-templatecache` automates `$templateCache` loading. See simple [gulpfile](gulpfile.ts).
 - `gulp-htmlmin` minifies the templates before putting them in the `$templateCache`
-- The output goes in [src/angularjs/templates/templates.js](src/angularjs/templates/templates.js).
-- The [src/angularjs/templates/index.js](src/angularjs/templates/index.js) file sets up a module.
+- The output goes in [src/app/angularjs/templates/templates.js](src/app/angularjs/templates/templates.js).
+- The [src/app/angularjs/templates/index.js](src/app/angularjs/templates/index.js) file sets up a module.
 - Then we import the module and use the `'templates'` string in our AngularJS module creation.
 
 ## TODO
