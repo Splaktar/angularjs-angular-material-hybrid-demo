@@ -24,8 +24,6 @@ Learn more in the [AngularJS Material Migration Guide](https://material.angularj
   - AngularJS referring to any component: `appComponent`
   - Angular referring to any component: `app-component`
 - ngUpgrade projects that work on StackBlitz, don’t work in the CLI and vice versa.
-- Need to provide at least one `entryComponents` for CLI support (not mentioned in
-  [guide](https://angular.io/guide/upgrade-performance#bootstrapping-with-downgrademodule)).
 
 ### Minification-friendly AngularJS Code
 

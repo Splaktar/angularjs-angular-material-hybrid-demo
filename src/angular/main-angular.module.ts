@@ -22,9 +22,6 @@ import {MatExpansionModule} from '@angular/material/expansion';
     AppComponent,
     VersionStampComponentFacade,
     TabsComponentFacade
-  ],
-  entryComponents: [
-    AppComponent
   ]
 })
 export class MainAngularModule {
