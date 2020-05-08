@@ -15,12 +15,12 @@ Angular Material, the Angular Component Dev Kit (CDK), and the Angular Flex Layo
 Additionally, we provide guidance on using pure CSS Grid and Flexbox for layout, migration of
 theming features, services, typography, and more.
 
-Learn more in the [AngularJS Material Migration Guide](https://material.angularjs.org/latest/migration). 
+Learn more in the [AngularJS Material Migration Guide](https://material.angularjs.org/latest/migration).
 
 ## Caveats found so far
 
 - Different `selector` formatting and conversions between AngularJS and Angular. It depends on which
-    is referring to the component, not which the component is build for.
+  is referring to the component, not which the component is build for.
   - AngularJS referring to any component: `appComponent`
   - Angular referring to any component: `app-component`
 - ngUpgrade projects that work on StackBlitz, don’t work in the CLI and vice versa.
@@ -38,6 +38,7 @@ Learn more in the [AngularJS Material Migration Guide](https://material.angularj
   - [Example](https://github.com/Splaktar/angularjs-angular-material-hybrid-demo/blob/a77f0567b1795529c1859f1b70fafc5ab5e998be/src/angularjs/tabs.component.ts#L7-L11)
 
 ### AngularJS Components w/ templateUrl
+
 `templateUrl` in AngularJS components does not work out of the box with Angular CLI.
 The following steps will configure a module that loads `$templateCache` at build time:
 

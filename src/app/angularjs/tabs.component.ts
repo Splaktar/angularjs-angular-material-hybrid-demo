@@ -1,5 +1,5 @@
-import {Directive, ElementRef, Injector} from '@angular/core';
-import {UpgradeComponent} from '@angular/upgrade/static';
+import { Directive, ElementRef, Injector } from '@angular/core';
+import { UpgradeComponent } from '@angular/upgrade/static';
 
 export const tabsComponent = {
   selector: 'ng1-tabs',
@@ -17,10 +17,10 @@ export const tabsComponent = {
         }
       });
     }
-  }
+  },
 };
 
-@Directive({selector: tabsComponent.selector})
+@Directive({ selector: tabsComponent.selector })
 export class TabsComponentFacade extends UpgradeComponent {
   constructor(elementRef: ElementRef, injector: Injector) {
     super(tabsComponent.selector, elementRef, injector);

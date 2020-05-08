@@ -1,9 +1,8 @@
 import * as angular from 'angular';
-import {Directive, ElementRef, Injector, VERSION} from '@angular/core';
-import {VERSION as cdkVersion} from '@angular/cdk';
-import {VERSION as matVersion} from '@angular/material/core';
-import {UpgradeComponent} from '@angular/upgrade/static';
-
+import { Directive, ElementRef, Injector, VERSION } from '@angular/core';
+import { VERSION as cdkVersion } from '@angular/cdk';
+import { VERSION as matVersion } from '@angular/material/core';
+import { UpgradeComponent } from '@angular/upgrade/static';
 
 export const versionStampComponent = {
   selector: 'version-stamp',
@@ -48,14 +47,13 @@ export const versionStampComponent = {
         md: $window.ngMaterial.version.full,
         angular: VERSION.full,
         cdk: cdkVersion.full,
-        mat: matVersion.full
+        mat: matVersion.full,
       };
     }
-  }
+  },
 };
 
-
-@Directive({selector: versionStampComponent.selector})
+@Directive({ selector: versionStampComponent.selector })
 export class VersionStampComponentFacade extends UpgradeComponent {
   constructor(elementRef: ElementRef, injector: Injector) {
     super(versionStampComponent.selector, elementRef, injector);

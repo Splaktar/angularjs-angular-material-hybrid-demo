@@ -8,8 +8,10 @@
     "build:templates": "gulp templates",
     "build": "npm run build:templates && ng build",
     "test": "ng test",
+    "prettier": "prettier --write \"**/*.{js,json,css,scss,less,md,ts,html,component.html}\"",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "smex": "source-map-explorer",
     "deploy": "npm run build:templates && ng deploy",
     "update": "npm-check -u"
   },
@@ -25,6 +27,7 @@
     "@angular/platform-browser": "9.1.6",
     "@angular/platform-browser-dynamic": "9.1.6",
     "@angular/upgrade": "9.1.6",
+    "@schuchard/prettier": "^3.1.0",
     "@types/angular": "^1.7.0",
     "@types/angular-material": "^1.1.71",
     "angular": "^1.7.9",
@@ -51,6 +54,7 @@
     "gulp": "^4.0.2",
     "gulp-angular-templatecache": "^3.0.0",
     "gulp-htmlmin": "^5.0.1",
+    "husky": "4.2.5",
     "jasmine-core": "^3.5.0",
     "jasmine-spec-reporter": "^5.0.2",
     "karma": "^5.0.5",
@@ -58,10 +62,31 @@
     "karma-coverage-istanbul-reporter": "^3.0.2",
     "karma-jasmine": "^3.1.1",
     "karma-jasmine-html-reporter": "^1.5.3",
+    "lint-staged": "10.2.2",
     "npm-check": "^5.9.2",
+    "prettier": "2.0.5",
     "protractor": "^5.4.4",
+    "rxjs-tslint-rules": "^4.31.0",
+    "source-map-explorer": "^2.4.2",
     "ts-node": "^8.10.1",
     "tslint": "^6.1.2",
+    "tslint-config-prettier": "1.18.0",
+    "tsutils": "^3.17.1",
     "typescript": "~3.8.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && ng lint"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,css,scss,less,md,ts,html,component.html}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "engines": {
+    "node": ">=12",
+    "npm": ">=6"
   }
 }
