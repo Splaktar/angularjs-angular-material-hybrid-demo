@@ -2,7 +2,7 @@ import {Directive, ElementRef, Injector} from '@angular/core';
 import {UpgradeComponent} from '@angular/upgrade/static';
 
 export const tabsComponent = {
-  selector: 'tabs',
+  selector: 'ng1-tabs',
   templateUrl: '/tabs.component.html',
   controller: class TabsComponent {
     static $inject = ['$scope'];

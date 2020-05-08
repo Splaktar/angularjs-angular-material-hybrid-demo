@@ -16,12 +16,15 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatDividerModule} from '@angular/material/divider';
 import {CdkTreeComponent} from './cdk-tree/cdk-tree.component';
 import {CdkTreeModule} from '@angular/cdk/tree';
+import {TopNavComponent} from './top-nav/top-nav.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     CommonModule,
+    HttpClientModule,
     MatToolbarModule,
     MatProgressSpinnerModule,
     MatExpansionModule,
@@ -37,7 +40,8 @@ import {CdkTreeModule} from '@angular/cdk/tree';
     TabsComponentFacade,
     TabsComponent,
     ButtonsComponent,
-    CdkTreeComponent
+    CdkTreeComponent,
+    TopNavComponent
   ]
 })
 export class MainAngularModule {
