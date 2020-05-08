@@ -13,8 +13,18 @@ import { bootstrapAngular } from './bootstrap-module';
 
 const downgradedModule = downgradeModule(bootstrapAngular);
 
+const configFunction = $mdThemingProvider => {
+  $mdThemingProvider
+    .theme('default')
+    .primaryPalette('indigo')
+    .accentPalette('green', { default: '500' })
+    .backgroundPalette('grey', { default: 'A100' });
+};
+configFunction.$inject = ['$mdThemingProvider'];
+
 export const appAngularjsModule = angular
   .module('AngularJSApp', ['ngMaterial', 'ngMessages', 'templates', downgradedModule])
+  .config(configFunction)
   .component(appAngularJSComponent.selector, appAngularJSComponent)
   .component(versionStampComponent.selector, versionStampComponent)
   .component(tabsComponent.selector, tabsComponent)
