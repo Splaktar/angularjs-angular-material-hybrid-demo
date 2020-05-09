@@ -13,14 +13,15 @@ import { bootstrapAngular } from './bootstrap-module';
 
 const downgradedModule = downgradeModule(bootstrapAngular);
 
-const configFunction = $mdThemingProvider => {
+const configFunction = ($mdThemingProvider, $mdGestureProvider) => {
   $mdThemingProvider
     .theme('default')
     .primaryPalette('indigo')
     .accentPalette('green', { default: '500' })
     .backgroundPalette('grey', { default: 'A100' });
+  $mdGestureProvider.skipClickHijack();
 };
-configFunction.$inject = ['$mdThemingProvider'];
+configFunction.$inject = ['$mdThemingProvider', '$mdGestureProvider'];
 
 export const appAngularjsModule = angular
   .module('AngularJSApp', ['ngMaterial', 'ngMessages', 'templates', downgradedModule])

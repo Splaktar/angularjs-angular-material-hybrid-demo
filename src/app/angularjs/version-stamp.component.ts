@@ -23,12 +23,12 @@ export const versionStampComponent = {
       .version img {
         vertical-align: top;
       }
-      md-divider {
+      #version-stamp-divider {
         margin-top: 64px;
       }
     </style>
 
-    <md-divider></md-divider>
+    <md-divider id="version-stamp-divider"></md-divider>
     <div class="version-container">
       <span class="version"><img src="/assets/angularjs.svg" alt="AngularJS icon" height="24px"> AngularJS v{{ $ctrl.versions.angularjs.full }} ({{ $ctrl.versions.angularjs.codeName }})</span>
       <span class="version"><img src="/assets/angularjs-material.png" alt="AngularJS Material icon" height="24px"> AngularJS Material v{{ $ctrl.versions.md }}</span>

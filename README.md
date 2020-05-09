@@ -48,13 +48,23 @@ The following steps will configure a module that loads `$templateCache` at build
 - The [src/app/angularjs/templates/index.js](src/app/angularjs/templates/index.js) file sets up a module.
 - Then we import the module and use the `'templates'` string in our AngularJS module creation.
 
+If you are working on AngularJS Templates (`.html` files referenced via `templateUrl`) and you want
+to enable the Angular CLI to auto-reload on changes, run:
+
+```sh
+npm run watch:templates
+```
+
 ## TODO
 
-- [ ] Add more AngularJS Material components.
-- [ ] Add more Angular Material components.
-- [ ] Add more CDK components.
 - [ ] Add some AngularJS Material services.
 - [ ] Add some Angular Material services.
 - [ ] Add some CDK services.
+- [x] Set up a watcher to rebuild AngularJS `$templateCache`
+- [x] Customize the AngularJS Material theme.
+- [x] Customize the Angular Material theme.
+- [x] Add more AngularJS Material components.
+- [x] Add more Angular Material components.
+- [x] Add more CDK components.
 - [x] Work around Terser mangling, using [dependency annotation](https://docs.angularjs.org/guide/di#dependency-annotation).
 - [x] Look into loading `$templateCache` at build time, using Gulp.
