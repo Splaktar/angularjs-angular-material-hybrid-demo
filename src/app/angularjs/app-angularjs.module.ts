@@ -3,8 +3,10 @@ import 'angular-animate';
 import 'angular-aria';
 import 'angular-messages';
 import 'angular-material';
+import 'angular-sanitize';
 import './templates/index';
 import { downgradeComponent, downgradeModule } from '@angular/upgrade/static';
+import { environment } from '../../environments/environment';
 import { AppComponent } from '../angular/app.component';
 import { appAngularJSComponent } from './app-angularjs.component';
 import { versionStampComponent } from './version-stamp.component';
@@ -19,12 +21,13 @@ const configFunction = ($mdThemingProvider, $mdGestureProvider) => {
     .primaryPalette('indigo')
     .accentPalette('green', { default: '500' })
     .backgroundPalette('grey', { default: 'A100' });
+  $mdThemingProvider.setNonce(`${btoa(environment.version)}`);
   $mdGestureProvider.skipClickHijack();
 };
 configFunction.$inject = ['$mdThemingProvider', '$mdGestureProvider'];
 
 export const appAngularjsModule = angular
-  .module('AngularJSApp', ['ngMaterial', 'ngMessages', 'templates', downgradedModule])
+  .module('AngularJSApp', ['ngMaterial', 'ngMessages', 'ngSanitize', 'templates', downgradedModule])
   .config(configFunction)
   .component(appAngularJSComponent.selector, appAngularJSComponent)
   .component(versionStampComponent.selector, versionStampComponent)
