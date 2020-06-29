@@ -5,12 +5,69 @@
       "public": "dist/",
       "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
       "appAssociation": "AUTO",
+      "cleanUrls": true,
       "rewrites": [
         {
-          "source": "**",
+          "source": "/**/!(*.@(js|ts|html|css|json|svg|png|jpg|jpeg|webp|gif|ico|woff2|woff|ttf|webmanifest))",
           "destination": "/index.html"
         }
-      ]
+      ],
+      "headers": [
+        {
+          "source": "/**(*.@(css|js|json|html|svg))",
+          "headers": [
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            }
+          ]
+        },
+        {
+          "source": "/**",
+          "headers": [
+            {
+              "key": "X-XSS-Protection",
+              "value": "1"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "Content-Security-Policy",
+              "value": "upgrade-insecure-requests; default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src *; media-src 'self'; script-src 'self' 'unsafe-inline' https://*.googleapis.com https://apis.google.com; child-src 'self' blob:; connect-src 'self' https://*.googleapis.com https://fonts.gstatic.com https://apis.google.com;"
+            }
+          ]
+        },
+        {
+          "source": "/assets/**",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "public, max-age=604800, s-maxage=1209600"
+            }
+          ]
+        },
+        {
+          "source": "/*.@(webmanifest|ico)",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "public, max-age=604800, s-maxage=1209600"
+            }
+          ]
+        },
+        {
+          "source": "/*.@(js|css)",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "public, max-age=31536000"
+            }
+          ]
+        }
+      ],
+      "trailingSlash": false
     }
   ]
 }

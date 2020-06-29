@@ -1,4 +1,7 @@
 {
+  "projects": {
+    "default": "material-hybrid"
+  },
   "targets": {
     "material-hybrid": {
       "hosting": {
