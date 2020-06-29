@@ -31,7 +31,16 @@
             "tsConfig": "src/tsconfig.app.json",
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": ["src/styles.scss", "node_modules/angular-material/angular-material.scss"],
-            "scripts": []
+            "scripts": [],
+            "allowedCommonJsDependencies": [
+              "angular",
+              "angular-animate",
+              "angular-aria",
+              "angular-material",
+              "angular-messages",
+              "zone.js/dist/zone-error",
+              "zone.js/dist/zone"
+            ]
           },
           "configurations": {
             "production": {
