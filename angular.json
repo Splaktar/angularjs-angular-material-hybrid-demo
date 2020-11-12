@@ -25,7 +25,6 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "aot": true,
-            "extractCss": true,
             "outputPath": "dist/",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -55,7 +54,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": true,
-              "extractCss": true,
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
