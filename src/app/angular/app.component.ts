@@ -7,5 +7,5 @@ import { Component, Input } from '@angular/core';
 })
 export class AppComponent {
   static selector = 'appComponent';
-  @Input() name: string;
+  @Input() name: string = 'Material';
 }
