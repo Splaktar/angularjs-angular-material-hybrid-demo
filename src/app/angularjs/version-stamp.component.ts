@@ -3,6 +3,7 @@ import { Directive, ElementRef, Injector, VERSION } from '@angular/core';
 import { VERSION as cdkVersion } from '@angular/cdk';
 import { VERSION as matVersion } from '@angular/material/core';
 import { UpgradeComponent } from '@angular/upgrade/static';
+import { IWindowService } from 'angular';
 
 export const versionStampComponent = {
   selector: 'version-stamp',
@@ -41,7 +42,7 @@ export const versionStampComponent = {
     static $inject = ['$window'];
     versions: object;
 
-    constructor($window) {
+    constructor($window: IWindowService) {
       this.versions = {
         angularjs: angular.version,
         md: $window.ngMaterial.version.full,

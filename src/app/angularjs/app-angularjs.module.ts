@@ -15,7 +15,7 @@ import { bootstrapAngular } from './bootstrap-module';
 
 const downgradedModule = downgradeModule(bootstrapAngular);
 
-const configFunction = ($mdThemingProvider, $mdGestureProvider) => {
+const configFunction = ($mdThemingProvider: any, $mdGestureProvider: any) => {
   $mdThemingProvider
     .theme('default')
     .primaryPalette('indigo')

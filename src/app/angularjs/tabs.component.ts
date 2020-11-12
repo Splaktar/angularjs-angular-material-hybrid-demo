@@ -1,5 +1,6 @@
 import { Directive, ElementRef, Injector } from '@angular/core';
 import { UpgradeComponent } from '@angular/upgrade/static';
+import { IScope } from 'angular';
 
 export const tabsComponent = {
   selector: 'ng1-tabs',
@@ -8,7 +9,7 @@ export const tabsComponent = {
     static $inject = ['$scope'];
     $digestCount = 0;
 
-    constructor($scope) {
+    constructor($scope: IScope) {
       this.$digestCount = 0;
       $scope.$watch(() => {
         this.$digestCount++;
