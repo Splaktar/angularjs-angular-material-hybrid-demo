@@ -40,7 +40,7 @@
     "firebase": "^8.2.9",
     "rxjs": "^6.6.3",
     "tslib": "^2.1.0",
-    "zone.js": "^0.11.4"
+    "zone.js": "~0.11.4"
   },
   "devDependencies": {
     "@angular-devkit/architect": "^0.1102.1",
@@ -56,7 +56,7 @@
     "gulp": "~4.0.2",
     "gulp-angular-templatecache": "~3.0.0",
     "gulp-htmlmin": "~5.0.1",
-    "husky": "^4.3.6",
+    "husky": "4.3.6",
     "lint-staged": "^10.5.4",
     "npm-check": "^5.9.2",
     "prettier": "^2.2.1",
