@@ -69,5 +69,14 @@
       ],
       "trailingSlash": false
     }
-  ]
+  ],
+  "emulators": {
+    "hosting": {
+      "port": 4200
+    },
+    "ui": {
+      "enabled": true,
+      "port": 4202
+    }
+  }
 }
