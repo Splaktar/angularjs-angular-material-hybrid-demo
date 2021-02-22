@@ -17,17 +17,17 @@
     "update": "npm-check -u"
   },
   "dependencies": {
-    "@angular/animations": "11.0.5",
-    "@angular/cdk": "11.0.3",
-    "@angular/common": "11.0.5",
-    "@angular/compiler": "11.0.5",
-    "@angular/core": "11.0.5",
+    "@angular/animations": "11.2.1",
+    "@angular/cdk": "11.2.1",
+    "@angular/common": "11.2.1",
+    "@angular/compiler": "11.2.1",
+    "@angular/core": "11.2.1",
     "@angular/fire": "^6.1.4",
-    "@angular/forms": "11.0.5",
-    "@angular/material": "11.0.3",
-    "@angular/platform-browser": "11.0.5",
-    "@angular/platform-browser-dynamic": "11.0.5",
-    "@angular/upgrade": "11.0.5",
+    "@angular/forms": "11.2.1",
+    "@angular/material": "11.2.1",
+    "@angular/platform-browser": "11.2.1",
+    "@angular/platform-browser-dynamic": "11.2.1",
+    "@angular/upgrade": "11.2.1",
     "@schuchard/prettier": "^5.0.0",
     "@types/angular": "^1.8.0",
     "@types/angular-material": "^1.1.72",
@@ -43,11 +43,11 @@
     "zone.js": "~0.11.3"
   },
   "devDependencies": {
-    "@angular-devkit/architect": "^0.1100.5",
-    "@angular-devkit/build-angular": "~0.1100.5",
-    "@angular/cli": "~11.0.5",
-    "@angular/compiler-cli": "~11.0.5",
-    "@angular/language-service": "~11.0.5",
+    "@angular-devkit/architect": "^0.1102.1",
+    "@angular-devkit/build-angular": "~0.1102.1",
+    "@angular/cli": "~11.2.1",
+    "@angular/compiler-cli": "~11.2.1",
+    "@angular/language-service": "~11.2.1",
     "@types/gulp": "^4.0.7",
     "@types/node": "^14.14.14",
     "codelyzer": "^6.0.1",
@@ -81,6 +81,6 @@
   },
   "engines": {
     "node": ">=12",
-    "npm": ">=6"
+    "npm": "6"
   }
 }
