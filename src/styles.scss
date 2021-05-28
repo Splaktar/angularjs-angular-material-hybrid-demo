@@ -1,21 +1,22 @@
-@import 'theme';
+@use '~@angular/material' as mat;
+@use 'theme';
 
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 // Be sure that you only ever include this mixin once!
-@include mat-core($custom-typography);
+@include mat.core(theme.$custom-typography);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include mat-core-theme($app-theme);
-@include mat-button-theme($app-theme);
-@include mat-icon-theme($app-theme);
-@include mat-toolbar-theme($app-theme);
-@include mat-divider-theme($app-theme);
-@include mat-expansion-panel-theme($app-theme);
-@include mat-progress-spinner-theme($app-theme);
-@include mat-tabs-theme($app-theme);
+@include mat.core-theme(theme.$app-theme);
+@include mat.button-theme(theme.$app-theme);
+@include mat.icon-theme(theme.$app-theme);
+@include mat.toolbar-theme(theme.$app-theme);
+@include mat.divider-theme(theme.$app-theme);
+@include mat.expansion-theme(theme.$app-theme);
+@include mat.progress-spinner-theme(theme.$app-theme);
+@include mat.tabs-theme(theme.$app-theme);
 
 /* You can add global styles to this file, and also import other style files */
 
